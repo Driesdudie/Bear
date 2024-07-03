@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    border-radius: 20px;
+    font-size: 50px;
+    background-color: aqua;
+
+        background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    width: 300px; /* Pas aan naar de breedte van je afbeelding */
+    height: 200px; /* Pas aan naar de hoogte van je afbeelding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.image-container .animated {
+    opacity: 0;
+    margin-top: 1000px;
+    width: 1000px; /* Pas aan naar de breedte van je gif */
+    height: 1000px; /* Pas aan naar de hoogte van je gif */
+}
+
+.image-container:hover .animated {
+    opacity: 1;
+}
+
+.image-container:hover .static {
+    opacity: 0;
+}
